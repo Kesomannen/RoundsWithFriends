@@ -197,7 +197,8 @@ namespace RWF.GameModes
 
             GameManager.instance.battleOngoing = false;
 
-            UIHandler.instance.ShowJoinGameText("LETS GOO!", PlayerSkinBank.GetPlayerSkinColors(1).winText);
+            // TODO: fix locale
+            UIHandler.instance.ShowJoinGameText(GM_ArmsRace.instance.m_localizedJoin, PlayerSkinBank.GetPlayerSkinColors(1).winText);
             yield return new WaitForSecondsRealtime(0.25f);
             UIHandler.instance.HideJoinGameText();
 

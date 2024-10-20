@@ -1,4 +1,6 @@
-﻿using HarmonyLib;
+﻿// TODO: fix steam
+/*
+using HarmonyLib;
 using Landfall.Network;
 using Steamworks;
 
@@ -18,3 +20,4 @@ namespace RWF.Patches
         }
     }
 }
+*/

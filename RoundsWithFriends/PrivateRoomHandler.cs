@@ -2,7 +2,8 @@
 using Landfall.Network;
 using Photon.Pun;
 using SoundImplementation;
-using Steamworks;
+// TODO: fix steam
+//using Steamworks;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -574,9 +575,10 @@ namespace RWF
             /* The local player's nickname is also set in NetworkConnectionHandler::OnJoinedRoom, but we'll do it here too so we don't
              * need to worry about timing issues
              */
+            // TODO: fix steam
             if (RWFMod.IsSteamConnected)
             {
-                PhotonNetwork.LocalPlayer.NickName = SteamFriends.GetPersonaName();
+                //PhotonNetwork.LocalPlayer.NickName = SteamFriends.GetPersonaName();
             }
             else
             {
@@ -891,7 +893,8 @@ namespace RWF
         [UnboundRPC]
         public static void StartGame()
         {
-            UIHandler.instance.ShowJoinGameText("LETS GOO!", PlayerSkinBank.GetPlayerSkinColors(1).winText);
+            // TODO: fix locale
+            UIHandler.instance.ShowJoinGameText(GM_ArmsRace.instance.m_localizedJoin, PlayerSkinBank.GetPlayerSkinColors(1).winText);
             
             // return Canvas to its original position
             PrivateRoomHandler.instance.gameObject.GetComponentInParent<Canvas>().sortingLayerName = "MostFront";

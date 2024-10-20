@@ -16,9 +16,9 @@ using Photon.Pun.UtilityScripts;
 using ExitGames.Client.Photon;
 using Jotunn.Utils;
 using RWF.UI;
-using On;
 using UnboundLib.Utils.UI;
 using System.Linq;
+using Debug = UnityEngine.Debug;
 
 namespace RWF
 {
@@ -108,9 +108,12 @@ namespace RWF
         {
             get
             {
+                // TODO: fix steam
+                return false;
+                /*
                 try
                 {
-                    Steamworks.InteropHelp.TestIfAvailableClient();
+                    //Steamworks.InteropHelp.TestIfAvailableClient();
                     return true;
                 }
                 catch (Exception e)
@@ -118,6 +121,7 @@ namespace RWF
                     _ = e;
                     return false;
                 }
+                */
             }
         }
 
@@ -272,6 +276,7 @@ namespace RWF
 
         private void GUI(GameObject menu)
         {
+            PlayerMovement movement;
             MenuHandler.CreateText($"{RWFMod.ModName} Options", menu, out TextMeshProUGUI _, 45);
             MenuHandler.CreateText(" ", menu, out TextMeshProUGUI _, 15);
             void ShowKeybindsChanged(bool val)

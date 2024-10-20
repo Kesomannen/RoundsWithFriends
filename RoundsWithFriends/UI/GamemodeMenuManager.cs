@@ -69,7 +69,8 @@ namespace RWF.UI
                 this.topBar.SetActive(false);
                 this.bottomBar.SetActive(false);
                 
-                this.transform.Find("RightPanel/Top/gameModeVideo").GetComponent<VideoPlayer>().Stop();
+                // TODO: fix video
+                //this.transform.Find("RightPanel/Top/gameModeVideo").GetComponent<VideoPlayer>().Stop();
 
                 this.lobbyMenuObject.transform.parent.parent.parent.Find("UIHolder")?.gameObject.SetActive(true);
 
@@ -104,7 +105,8 @@ namespace RWF.UI
 
             var video = this.transform.Find("RightPanel/Top/gameModeVideo").gameObject;
             var renderTexture = new RenderTexture(1920, 1080, 24);
-            video.GetComponent<VideoPlayer>().targetTexture = renderTexture;
+            // TODO: fix video
+            //video.GetComponent<VideoPlayer>().targetTexture = renderTexture;
             video.GetComponent<RawImage>().texture = renderTexture;
 
             var mixers = Resources.FindObjectsOfTypeAll<AudioMixerGroup>();
@@ -167,8 +169,9 @@ namespace RWF.UI
                 curGamemode.Name.ToUpper();
             
             // Set video
-            this.transform.Find("RightPanel/Top/gameModeVideo").GetComponent<VideoPlayer>().url = curGamemode.UISettings.videoURL; 
-            this.transform.Find("RightPanel/Top/gameModeVideo").GetComponent<VideoPlayer>().Play();
+            // TODO: fix video
+            //this.transform.Find("RightPanel/Top/gameModeVideo").GetComponent<VideoPlayer>().url = curGamemode.UISettings.videoURL; 
+            //this.transform.Find("RightPanel/Top/gameModeVideo").GetComponent<VideoPlayer>().Play();
             
             // Set description
             var descriptionObj = this.transform.Find("RightPanel/Bottom/Panel/Text").GetComponent<TextMeshProUGUI>();

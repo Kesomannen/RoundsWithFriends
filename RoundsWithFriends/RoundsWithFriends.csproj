@@ -45,6 +45,7 @@
 
   <ItemGroup>
     <PackageReference Include="UnboundLib" Version="2.11.0" />
+    <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -54,7 +55,7 @@
     <Reference Include="BepInEx">
       <HintPath>..\Assemblies\BepInEx.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp">
+    <Reference Include="Assembly-CSharp" Publicize="True">
       <HintPath>$(RoundsFolder)\Rounds_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
@@ -84,6 +85,9 @@
     <Reference Include="Unity.TextMeshPro">
       <HintPath>$(RoundsFolder)\Rounds_Data\Managed\Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Localization">
+      <HintPath>$(RoundsFolder)\Rounds_Data\Managed\Unity.Localization.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>$(RoundsFolder)\Rounds_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
@@ -108,17 +112,25 @@
     <Reference Include="UnityEngine.TextRenderingModule">
       <HintPath>$(RoundsFolder)\Rounds_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>$(RoundsFolder)\Rounds_Data\Managed\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UIModule">
       <HintPath>$(RoundsFolder)\Rounds_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(RoundsFolder)\Rounds_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
       <HintPath>$(RoundsFolder)\Rounds_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.VideoModule">
-      <HintPath>$(RoundsFolder)\Rounds_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+    <Reference Include="UnityEngine.VideoPlayer">
+      <HintPath>$(RoundsFolder)\Rounds_Data\Managed\UnityEngine.VideoPlayer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(RoundsFolder)\Rounds_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="com.rlabrecque.steamworks.net">
+      <HintPath>
+        $(RoundsFolder)\Rounds_Data\Managed\com.rlabrecque.steamworks.net.dll
+      </HintPath>
     </Reference>
   </ItemGroup>
 

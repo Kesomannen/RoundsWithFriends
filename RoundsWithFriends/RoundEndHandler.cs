@@ -50,7 +50,7 @@ namespace RWF
                 else
                 {
                     string hostName = PhotonNetwork.CurrentRoom.Players.Values.First(p => p.IsMasterClient).NickName;
-                    UIHandler.instance.ShowJoinGameText($"WAITING FOR {hostName}", PlayerSkinBank.GetPlayerSkinColors(1).winText);
+                    UIHandler.instance.ShowJoinGameText(GM_ArmsRace.instance.m_localizedWaiting, PlayerSkinBank.GetPlayerSkinColors(1).winText);
                 }
 
                 MapManager.instance.LoadNextLevel(false, false);

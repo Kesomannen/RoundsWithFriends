@@ -250,8 +250,13 @@ namespace RWF
 				}
 			}
 
-			instance.text.color = PlayerSkinBank.GetPlayerSkinColors(PlayerManager.instance.GetPlayersInTeam(winnerTeamID)[0].colorID()).winText;
-			instance.text.text = $"POINT TO {(GameModeManager.CurrentHandler.AllowTeams ? "TEAM " : "")}{ExtraPlayerSkins.GetTeamColorName(PlayerManager.instance.GetPlayersInTeam(winnerTeamID)[0].colorID()).ToUpper()}";
+            string str =
+                $"POINT TO {(GameModeManager.CurrentHandler.AllowTeams ? "TEAM " : "")}{ExtraPlayerSkins.GetTeamColorName(PlayerManager.instance.GetPlayersInTeam(winnerTeamID)[0].colorID()).ToUpper()}";
+            Debug.LogWarning($"(FIX THIS) Show points for {str}");
+
+            // TODO: fix locale
+			//instance.text.color = PlayerSkinBank.GetPlayerSkinColors(PlayerManager.instance.GetPlayersInTeam(winnerTeamID)[0].colorID()).winText;
+			//instance.text.text = $"POINT TO {(GameModeManager.CurrentHandler.AllowTeams ? "TEAM " : "")}{ExtraPlayerSkins.GetTeamColorName(PlayerManager.instance.GetPlayersInTeam(winnerTeamID)[0].colorID()).ToUpper()}";
 		}
 
         // Overload for the existing DoWinSequence method to support more than two winners, or no winners
@@ -465,9 +470,12 @@ namespace RWF
 
             float fontSize = winnerTeamIDs.Count() > 2 ? 100f / (winnerTeamIDs.Count() - 1) : 100f;
 
+            Debug.LogWarning($"(FIX THIS) Show points: {text}");
+            /*
             instance.text.color = color;
             instance.text.text = text;
             instance.text.fontSize = fontSize;
+            */
         }
     }
 }
